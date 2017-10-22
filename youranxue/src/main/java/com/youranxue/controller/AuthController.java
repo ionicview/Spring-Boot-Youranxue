@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.youranxue.YouRanXueApplication;
-import com.youranxue.db.User;
-import com.youranxue.db.UserService;
+import com.youranxue.domain.security.User;
+import com.youranxue.domain.security.UserService;
 import com.youranxue.token.TokenProvider;
 
 @CrossOrigin

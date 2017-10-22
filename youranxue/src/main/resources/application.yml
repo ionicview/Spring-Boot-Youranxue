@@ -1,7 +1,7 @@
 app:
   secret: the_secret
   token-validity-in-seconds: 60
-  image-root: C:/Users/xjwan/git/java/youranxue/src/
+  image-root: C:/Users/xjwan/git/spring-boot-youranxue/youranxue/src/
   
 security:
   ignored:
@@ -23,6 +23,6 @@ spring:
 logging:
  level:
   org.springframework: Info
-  level.root: Info
+  level.root: debug
  pattern:
   console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"

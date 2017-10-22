@@ -9,6 +9,6 @@ public interface BookService {
 
 	List<List<Book>> searchMyBookList(String userId);
 
-	//List<Chapter> serachChapterList(long bookId);
+	List<Chapter> serachChapterList(Integer bookId);
 
 }

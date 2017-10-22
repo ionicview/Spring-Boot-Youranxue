@@ -19,11 +19,12 @@
 			
 			</table>
  -->			
-		<table schema="youranxue" tableName="book_mst"/>			
+<!-- 		<table schema="youranxue" tableName="book_mst"/>			
 		<table schema="youranxue" tableName="chapter_mst"/>			
 		<table schema="youranxue" tableName="section_mst"/>
 		<table schema="youranxue" tableName="my_books"/>
-		<table schema="youranxue" tableName="img_mst"/>
+		<table schema="youranxue" tableName="img_mst"/> -->
+		<table schema="youranxue" tableName="question"/>
 		
 	</context>
 </generatorConfiguration>

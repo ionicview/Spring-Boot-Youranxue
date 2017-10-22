@@ -3,9 +3,9 @@ package com.youranxue.controller;
 import java.net.URISyntaxException;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import org.apache.log4j.Logger;
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +22,7 @@ import com.youranxue.domain.vo.Chapter;
 @RequestMapping("/books")
 public class BooksController {
 
-	@Autowired
+	@Inject
 	private BookService bookService;
 
 	private static Logger log = Logger.getLogger(BooksController.class);
@@ -37,8 +37,8 @@ public class BooksController {
 
 	@ResponseBody
 	@RequestMapping(value = "/{bookId}", method = RequestMethod.GET)
-	public List<Chapter> getChapter(@PathVariable long bookId) throws URISyntaxException {
-
+	public List<Chapter> getChapter(@PathVariable Integer bookId) throws URISyntaxException {
+		return bookService.serachChapterList(bookId);
 		// List<Chapter> chapterList = new ArrayList<>();
 		//
 		// List<Integer> thumbsups = new ArrayList<>();
@@ -64,7 +64,7 @@ public class BooksController {
 		//
 		// Chapter cp2 = new Chapter(2, "", sectionList2);
 		// chapterList.add(cp2);
-		return null;
+		// return null;
 		// return bookService.serachChapterList(bookId);
 	}
 

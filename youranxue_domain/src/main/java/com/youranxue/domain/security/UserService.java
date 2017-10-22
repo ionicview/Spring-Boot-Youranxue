@@ -1,4 +1,4 @@
-package com.youranxue.db;
+package com.youranxue.domain.security;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
