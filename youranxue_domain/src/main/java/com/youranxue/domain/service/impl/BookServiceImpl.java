@@ -3,10 +3,13 @@ package com.youranxue.domain.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.youranxue.domain.entity.BookEntity;
+import com.youranxue.domain.mapper.BookMstMapper;
 import com.youranxue.domain.service.BookService;
 import com.youranxue.domain.vo.Book;
 import com.youranxue.domain.vo.Chapter;
@@ -17,7 +20,11 @@ public class BookServiceImpl implements BookService {
 	@Autowired
 	private BookEntity bookEntity;
 
+	@Inject
+	private BookMstMapper bookMstMapper;
+
 	public List<List<Book>> searchMyBookList(String userId) {
+
 
 		List<Book> myBookList = bookEntity.searchMyBookList(userId);
 
@@ -39,10 +46,10 @@ public class BookServiceImpl implements BookService {
 		return outList;
 	}
 
-//	@Override
-//	public List<Chapter> serachChapterList(long bookId) {
-//		bookEntity.setBookId(bookId);
-//		return bookEntity.searchChapterList();
-//	}
+	@Override
+	public List<Chapter> serachChapterList(Integer bookId) {
+
+		return bookEntity.searchChapterList(bookId);
+	}
 
 }
